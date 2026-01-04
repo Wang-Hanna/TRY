@@ -1,0 +1,526 @@
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>承千年非遗 铸国礼匠心 - 深圳市星视安科技有限公司</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 自定义配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-red': '#B91C1C',
+                        'primary-gold': '#D97706',
+                        'secondary-gold': '#FBBF24',
+                        'dark-red': '#7F1D1D',
+                        'light-gold': '#FEF3C7',
+                        'text-dark': '#1F2937'
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'slide-down': 'slideDown 0.8s ease-out',
+                        'slide-left': 'slideLeft 0.8s ease-out',
+                        'slide-right': 'slideRight 0.8s ease-out',
+                        'float': 'float 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        slideLeft: {
+                            '0%': { transform: 'translateX(20px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' }
+                        },
+                        slideRight: {
+                            '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            .text-shadow-sm {
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            }
+            .bg-texture {
+                background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d97706' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .page-transition {
+                transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            }
+            .page-enter {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            .page-enter-active {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            .page-exit {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            .page-exit-active {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-amber-50 font-sans text-text-dark overflow-x-hidden">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-sm shadow-md z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary-red rounded-full flex items-center justify-center">
+                    <span class="text-white font-serif font-bold text-xl">星</span>
+                </div>
+                <span class="font-serif font-bold text-xl text-primary-red">星视安科技</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#page1" class="nav-link font-medium text-primary-red hover:text-dark-red transition-colors">首页</a>
+                <a href="#page2" class="nav-link font-medium text-gray-700 hover:text-primary-red transition-colors">关于我们</a>
+                <a href="#page3" class="nav-link font-medium text-gray-700 hover:text-primary-red transition-colors">产品矩阵</a>
+                <a href="#page4" class="nav-link font-medium text-gray-700 hover:text-primary-red transition-colors">发展理念</a>
+            </div>
+            <button class="md:hidden text-gray-700 focus:outline-none" id="menu-toggle">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="md:hidden hidden bg-white shadow-lg absolute w-full" id="mobile-menu">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="#page1" class="mobile-nav-link font-medium text-primary-red hover:text-dark-red transition-colors py-2">首页</a>
+                <a href="#page2" class="mobile-nav-link font-medium text-gray-700 hover:text-primary-red transition-colors py-2">关于我们</a>
+                <a href="#page3" class="mobile-nav-link font-medium text-gray-700 hover:text-primary-red transition-colors py-2">产品矩阵</a>
+                <a href="#page4" class="mobile-nav-link font-medium text-gray-700 hover:text-primary-red transition-colors py-2">发展理念</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 第一页：封面 -->
+    <section id="page1" class="min-h-screen flex flex-col justify-center items-center relative overflow-hidden bg-texture pt-16">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary-red/5 to-transparent opacity-70"></div>
+        
+        <!-- 装饰元素 -->
+        <div class="absolute top-20 left-10 w-20 h-20 border-2 border-primary-gold/30 rounded-full"></div>
+        <div class="absolute bottom-20 right-10 w-32 h-32 border-2 border-primary-gold/20 rounded-full"></div>
+        <div class="absolute top-1/2 left-1/4 w-16 h-16 border border-primary-red/20 rounded-full"></div>
+        
+        <div class="container mx-auto px-4 z-10 text-center">
+            <h1 class="font-serif font-bold text-[clamp(2.5rem,8vw,5rem)] text-primary-red mb-6 animate-fade-in text-shadow">
+                承千年非遗
+            </h1>
+            <h2 class="font-serif font-bold text-[clamp(2.5rem,8vw,5rem)] text-primary-gold mb-10 animate-slide-up text-shadow">
+                铸国礼匠心
+            </h2>
+            <p class="text-[clamp(1rem,3vw,1.5rem)] text-gray-700 max-w-2xl mx-auto mb-12 animate-slide-up" style="animation-delay: 0.3s;">
+                深圳市星视安科技有限公司 - 专注于高端非遗文化传播与价值转化的专业机构
+            </p>
+            <div class="animate-slide-up" style="animation-delay: 0.6s;">
+                <a href="#page2" class="inline-block bg-primary-red hover:bg-dark-red text-white font-medium py-3 px-8 rounded-full transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300">
+                    了解更多
+                </a>
+            </div>
+        </div>
+        
+        <!-- 滚动提示 -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fa fa-angle-down text-3xl text-primary-red/70"></i>
+        </div>
+    </section>
+
+    <!-- 第二页：关于我们 -->
+    <section id="page2" class="min-h-screen flex flex-col justify-center relative overflow-hidden bg-white pt-16">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-light-gold/30 to-transparent"></div>
+        
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+                    <h2 class="font-serif font-bold text-[clamp(1.8rem,5vw,3rem)] text-primary-red mb-6 inline-block relative">
+                        关于我们
+                        <span class="absolute bottom-0 left-0 w-full h-1 bg-primary-gold"></span>
+                    </h2>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        深圳市星视安科技有限公司立足深圳、辐射全国，是专注于高端非遗文化传播与价值转化的专业机构。公司秉持"守正匠心·传韵非遗·赋能共生"的核心价值观，以"传承中华文脉、铸就国礼品质"为使命，深耕非遗产业领域，致力于成为非遗文化创造性转化、创新性发展的核心践行者。
+                    </p>
+                    <p class="text-gray-700 mb-8 leading-relaxed">
+                        凭借规范运营与深厚行业积淀，公司先后成为北京工美行业协会、广东省工艺美术协会、北京市西城区工商联、深圳市福田区工商联、深圳市罗湖区工商联合会（总商会）等权威机构会员单位，构建起跨区域、多层次的行业资源网络。
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="bg-light-gold/30 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <div class="text-primary-red text-3xl mb-3">
+                                <i class="fa fa-handshake-o"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2">权威资质</h3>
+                            <p class="text-gray-700 text-sm">APEC、亚运会国礼供应关联资质及深圳文交所入驻背书</p>
+                        </div>
+                        <div class="bg-light-gold/30 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <div class="text-primary-red text-3xl mb-3">
+                                <i class="fa fa-sitemap"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2">全链条服务</h3>
+                            <p class="text-gray-700 text-sm">集非遗资源整合、产品研发、礼赠定制、文化传播于一体</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 relative">
+                    <div class="relative z-10 rounded-lg overflow-hidden shadow-xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/c50ad11f1bc14122b418e98011fae190~tplv-a9rns2rl98-image.image?rcl=20260104212018ACF2402572CDABC6277B&amp;rk3s=8e244e95&amp;rrcfp=2609e108&amp;x-expires=1768137622&amp;x-signature=ibO04tJ48B2oA10xrBNrz9v5s2k%3D" alt="燕京八绝 - 中国传统非遗工艺" class="w-full h-auto">
+                    </div>
+                    <div class="absolute top-10 -left-10 w-40 h-40 bg-primary-gold/20 rounded-full -z-10"></div>
+                    <div class="absolute -bottom-10 -right-10 w-60 h-60 bg-primary-red/10 rounded-full -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第三页：产品矩阵 -->
+    <section id="page3" class="min-h-screen flex flex-col justify-center relative overflow-hidden bg-texture pt-16">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-primary-red/5 to-transparent opacity-50"></div>
+        
+        <div class="container mx-auto px-4 py-16 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-serif font-bold text-[clamp(1.8rem,5vw,3rem)] text-primary-red mb-6 inline-block relative">
+                    核心产品矩阵
+                    <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-1 bg-primary-gold"></span>
+                </h2>
+                <p class="text-gray-700 max-w-2xl mx-auto">
+                    公司已联动数百位国家级、省级非遗大师及行业传承人，打造三大核心产品矩阵，兼具文化价值与艺术收藏属性。
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 产品1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-2 duration-300">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/00993ee252da4eddaa5d440790eb405d~tplv-a9rns2rl98-image.image?rcl=20260104213254108A4AE4464FB5F03DD3&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1768138374&amp;x-signature=YGMbye5fr7nOYB2%2FBaGWCWg4cSg%3D" alt="燕京八绝系列" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white font-bold text-xl">燕京八绝系列</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4">汇聚宫廷技艺精髓，彰显皇家工艺恢弘气度。包括玉雕、牙雕、景泰蓝、雕漆、金漆镶嵌、花丝镶嵌、宫毯、京绣等八种传统工艺。</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light-gold/50 text-primary-gold text-xs px-3 py-1 rounded-full">宫廷技艺</span>
+                            <span class="bg-light-gold/50 text-primary-gold text-xs px-3 py-1 rounded-full">皇家工艺</span>
+                            <span class="bg-light-gold/50 text-primary-gold text-xs px-3 py-1 rounded-full">文化传承</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 产品2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-2 duration-300">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/4f8a60397c814f92bd854c6b0fac4e2b~tplv-a9rns2rl98-image.image?rcl=20260104210954679EC38FFE31CFDD8089&amp;rk3s=8e244e95&amp;rrcfp=f06b921b&amp;x-expires=1770124212&amp;x-signature=PCAgZcFwCyIxo%2BMFnesgTn3vS7g%3D" alt="雅韵珍工系列" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white font-bold text-xl">雅韵珍工系列</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4">囊括苏绣、端砚、紫砂等瑰宝，传承江南匠心与文人雅趣。每一件作品都凝聚了匠人的心血与智慧，展现了中国传统工艺的精湛技艺。</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light-gold/50 text-primary-gold text-xs px-3 py-1 rounded-full">江南匠心</span>
+                            <span class="bg-light-gold/50 text-primary-gold text-xs px-3 py-1 rounded-full">文人雅趣</span>
+                            <span class="bg-light-gold/50 text-primary-gold text-xs px-3 py-1 rounded-full">工艺瑰宝</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 产品3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-2 duration-300">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/4625098198604a7ba319af4b65e96d17~tplv-a9rns2rl98-image.image?rcl=20260104210954679EC38FFE31CFDD8089&amp;rk3s=8e244e95&amp;rrcfp=f06b921b&amp;x-expires=1770124220&amp;x-signature=ZSc%2BYDdr%2FScA999Rp9ZxTVGVXNY%3D" alt="翰墨錾金系列" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white font-bold text-xl">翰墨錾金系列</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4">融合书法、绘画、錾刻版画的艺术精品，尽显笔墨意境与肌理之美。将传统书画艺术与现代设计理念相结合，打造出独具特色的文化艺术品。</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light-gold/50 text-primary-gold text-xs px-3 py-1 rounded-full">书画艺术</span>
+                            <span class="bg-light-gold/50 text-primary-gold text-xs px-3 py-1 rounded-full">錾刻工艺</span>
+                            <span class="bg-light-gold/50 text-primary-gold text-xs px-3 py-1 rounded-full">现代设计</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第四页：发展理念 -->
+    <section id="page4" class="min-h-screen flex flex-col justify-center relative overflow-hidden bg-white pt-16">
+        <div class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-light-gold/30 to-transparent"></div>
+        
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 order-2 md:order-1">
+                    <div class="relative z-10 rounded-lg overflow-hidden shadow-xl transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/d5485681de354992ba9fc61cba1cdc37~tplv-a9rns2rl98-image.image?rcl=202601042150504750E7B5D2ADFB222399&amp;rk3s=8e244e95&amp;rrcfp=2609e108&amp;x-expires=1768139454&amp;x-signature=CgdMH9M3hDiCKz%2Bdpz1USf%2FSSYw%3D" alt="非遗传承" class="w-full h-auto">
+                    </div>
+                    <div class="absolute top-10 -right-10 w-40 h-40 bg-primary-gold/20 rounded-full -z-10"></div>
+                    <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-primary-red/10 rounded-full -z-10"></div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12 order-1 md:order-2">
+                    <h2 class="font-serif font-bold text-[clamp(1.8rem,5vw,3rem)] text-primary-red mb-6 inline-block relative">
+                        发展理念
+                        <span class="absolute bottom-0 left-0 w-full h-1 bg-primary-gold"></span>
+                    </h2>
+                    
+                    <div class="mb-8">
+                        <h3 class="font-bold text-xl mb-4 text-primary-gold">非遗传承与就业赋能并举</h3>
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            公司坚持"非遗传承与就业赋能并举"的发展理念，在守护传统技艺本真的基础上，构建"大师领衔+工坊培育+市场赋能"的可持续发展模式。
+                        </p>
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            通过订单合作、技能培训等多元化方式，带动非遗从业者灵活就业、增收致富，推动千年手艺转化为惠及民生的"指尖经济"，实现文化价值与社会价值共生共赢。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-light-gold/30 p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-xl mb-4 text-primary-red">未来展望</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            未来，公司将持续依托多元权威平台资源，深化与各界的交流协作，以国礼标准严控产品品质与服务水准，在高端礼赠场景中彰显中国匠心、传播东方文化，为推动中华优秀传统文化走向世界、提升国家文化软实力贡献力量，与各界同仁携手共筑非遗文化传承发展新生态。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-primary-red text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-primary-red font-serif font-bold text-xl">星</span>
+                        </div>
+                        <span class="font-serif font-bold text-xl">星视安科技</span>
+                    </div>
+                    <p class="text-white/80 max-w-md">
+                        专注于高端非遗文化传播与价值转化，致力于成为非遗文化创造性转化、创新性发展的核心践行者。
+                    </p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row md:space-x-16 space-y-8 md:space-y-0">
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">联系我们</h3>
+                        <ul class="space-y-2 text-white/80">
+                            <li class="flex items-center">
+                                <i class="fa fa-map-marker mr-2"></i>
+                                <span>深圳市福田区安峦公馆C栋</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-phone mr-2"></i>
+                                <span>13290459999 13785578887</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-envelope mr-2"></i>
+                                <span>879257014@qq.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">关注我们</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                                <i class="fa fa-weixin text-xl"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                                <i class="fa fa-weibo text-xl"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                                <i class="fa fa-linkedin text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 mt-10 pt-6 text-center text-white/60">
+                <p>© 2025 深圳市星视安科技有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 页面切换指示器 -->
+    <div class="fixed right-6 top-1/2 transform -translate-y-1/2 z-40 hidden md:block">
+        <div class="flex flex-col space-y-4">
+            <a href="#page1" class="page-indicator w-3 h-3 rounded-full bg-primary-red"></a>
+            <a href="#page2" class="page-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-primary-red transition-colors"></a>
+            <a href="#page3" class="page-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-primary-red transition-colors"></a>
+            <a href="#page4" class="page-indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-primary-red transition-colors"></a>
+        </div>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white shadow-lg opacity-0 invisible transition-all duration-300 z-40">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            const backToTop = document.getElementById('back-to-top');
+            
+            if (window.scrollY > 100) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-3');
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                nav.classList.add('py-3');
+                nav.classList.remove('py-2');
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+            
+            // 更新页面指示器
+            updatePageIndicators();
+        });
+        
+        // 移动端菜单
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // 关闭移动端菜单
+                document.getElementById('mobile-menu').classList.add('hidden');
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 返回顶部按钮
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 更新页面指示器
+        function updatePageIndicators() {
+            const sections = ['#page1', '#page2', '#page3', '#page4'];
+            const indicators = document.querySelectorAll('.page-indicator');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const element = document.querySelector(section);
+                const rect = element.getBoundingClientRect();
+                
+                if (rect.top <= 100 && rect.bottom >= 100) {
+                    currentSection = section;
+                }
+            });
+            
+            indicators.forEach((indicator, index) => {
+                if (`#page${index + 1}` === currentSection) {
+                    indicator.classList.remove('bg-gray-300');
+                    indicator.classList.add('bg-primary-red');
+                } else {
+                    indicator.classList.add('bg-gray-300');
+                    indicator.classList.remove('bg-primary-red');
+                }
+            });
+            
+            navLinks.forEach((link, index) => {
+                if (`#page${index + 1}` === currentSection) {
+                    link.classList.remove('text-gray-700');
+                    link.classList.add('text-primary-red');
+                } else {
+                    link.classList.add('text-gray-700');
+                    link.classList.remove('text-primary-red');
+                }
+            });
+            
+            mobileNavLinks.forEach((link, index) => {
+                if (`#page${index + 1}` === currentSection) {
+                    link.classList.remove('text-gray-700');
+                    link.classList.add('text-primary-red');
+                } else {
+                    link.classList.add('text-gray-700');
+                    link.classList.remove('text-primary-red');
+                }
+            });
+        }
+        
+        // 初始化
+        updatePageIndicators();
+        
+        // 添加滚动动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // 观察需要动画的元素
+        document.querySelectorAll('section > div > div').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body></html>
